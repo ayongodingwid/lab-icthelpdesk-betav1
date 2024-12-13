@@ -41,16 +41,16 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
+      <a href="{{ route('Index') }}" class="logo d-flex align-items-center me-auto">
         <img src="{{ asset('img/logo.png') }}" alt="">
         <h1 class="sitename">ICT Helpdesk</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html#hero" class="active">Beranda</a></li>
-          <li><a href="index.html#tiket">Buat Tiket</a></li>
-          <li><a href="index.html#features">FAQ</a></li>
+          <li><a href="{{ route('Index') }}#hero" class="active">Beranda</a></li>
+          <li><a href="{{ route('Index') }}#tiket">Buat Tiket</a></li>
+          <li><a href="{{ route('Index') }}#faq">FAQ</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -76,7 +76,7 @@
               <input type="email" class="form-control form-control-lg" id="exampleFormControlInput1" placeholder="Ketikan nomor tiket disini">
             </div>
             <div class="d-flex">
-              <a href="../AdminDashboard-helpdesk/ict-cari-ticket.html" class="btn-get-started">Cek Progres</a>
+              <a href="{{ route('Cek') }}" class="btn-get-started">Cek Progres</a>
             </div>
           </div>
           <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
@@ -101,7 +101,7 @@
               <p>
                Untuk memlakukan permintaan cek dan perbaikan, kamu bisa langsung buat tiket permintaan disini dan nanti tim ICT akan kontak kamu kembali
               </p>
-              <a href="#" class="btn more-btn">Buat Tiket</a>
+              <a href="{{ route('Buat') }}" class="btn more-btn">Buat Tiket</a>
             </div>
           </div>
 

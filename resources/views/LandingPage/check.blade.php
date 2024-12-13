@@ -11,7 +11,7 @@
 
   <!-- Favicons -->
   <link href="{{ asset('img/favicon_.ico') }}" rel="icon">
-  <link href="{{ asset('img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+  <link href="{{ asset('img/apple-touch-icon.png') }}') }}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -43,11 +43,10 @@
   <main>
     <div class="container">
 
-      <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+      <section class="section register min-vh-100 flex-column align-items-center justify-content-center py-4">
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
-
+            <div class="col flex-column align-items-center justify-content-center">
               <div class="d-flex justify-content-center py-4">
                 <a href="{{ route('Index') }}" class="logo d-flex align-items-center w-auto">
                   <img src="{{ asset('img/favicon_.ico') }}" alt="">
@@ -56,46 +55,55 @@
               </div><!-- End Logo -->
 
               <div class="card mb-3">
-
-                <div class="card-body">
-
-                  <div class="pt-4 pb-2">
-                    <h5 class="card-title text-center pb-0 fs-4">Masuk ke Akun Kamu</h5>
-                    <p class="text-center small">Ketikan user id dan kata sandi untuk masuk</p>
+                <div class="card-body py-3">
+                  <div class="table-responsive">
+                    <table class="table table-hover table-bordered mt-lg-4 text-center">
+                      <thead>
+                        <tr>
+                          <th scope="col">Nomor tiket</th>
+                          <th scope="col">Nama Pengguna</th>
+                          <th scope="col">Divisi</th>
+                          <th scope="col">Problem</th>
+                          <th scope="col">Status</th>
+                          <th scope="col">Aksi</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">#2451135757</th>
+                          <td>Dzaky Haidar</td>
+                          <td>Creative Marketing</td>
+                          <td>Hardware/Software</td>
+                          <td><span class="badge bg-info text-dark">Diterima</span></td>
+                          <td><button type="button" class="btn btn-primary rounded-pill btn-sm "><i class="bi bi-info-circle me-2"></i> Cek Detail</button></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">#2451135758</th>
+                          <td>Yanto</td>
+                          <td>HCGA</td>
+                          <td>Printer Error</td>
+                          <td><span class="badge bg-warning text-dark">Pengerjaan</span></td>
+                          <td><a href="ict-detail-ticket.html" type="button" class="btn btn-primary rounded-pill btn-sm"><i class="bi bi-info-circle me-2"></i> Cek Detail</a></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">#2451135759</th>
+                          <td>Dede Iskandar</td>
+                          <td>Finance</td>
+                          <td>Printer</td>
+                          <td><span class="badge text-bg-success">Selesai</span></td>
+                          <td><button type="button" class="btn btn-primary rounded-pill btn-sm"><i class="bi bi-info-circle me-2"></i> Cek Detail</button></td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
-
-                  <form class="row g-3 needs-validation" novalidate>
-
-                    <div class="col-12">
-                      <label for="yourUsername" class="form-label">User Id</label>
-                      <div class="input-group has-validation">
-                        <!-- <span class="input-group-text" id="inputGroupPrepend">@</span> -->
-                        <input type="text" name="username" class="form-control" id="yourUsername" required>
-                        <div class="invalid-feedback">Tolong ketikan User Id!</div>
-                      </div>
-                    </div>
-
-                    <div class="col-12">
-                      <label for="yourPassword" class="form-label">Kata Sandi</label>
-                      <input type="password" name="password" class="form-control" id="yourPassword" required>
-                      <div class="invalid-feedback">Tolong ketikan Kat Sandi!</div>
-                    </div>
-
-                    <!-- <div class="col-12">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="remember" value="true" id="rememberMe">
-                        <label class="form-check-label" for="rememberMe">Remember me</label>
-                      </div>
-                    </div> -->
-                    <div class="col-12">
-                      <a href="ict-dashboard.html" class="btn more-btn w-100" type="submit">Masuk</a>
-                    </div>
-                  </form>
-
+                  
+                  <button type="button" class="btn btn-light"><i class="ri ri-arrow-left-s-fill"> </i>Kembali</button>
+                  <!-- End Table with hoverable rows -->
+    
                 </div>
               </div>
 
-              <div class="credits">
+              <div class="credits d-flex justify-content-center">
                 <!-- All the links in the footer should remain intact. -->
                 <!-- You can delete the links only if you purchased the pro version. -->
                 <!-- Licensing information: https://bootstrapmade.com/license/ -->
@@ -125,7 +133,7 @@
   <script src="{{ asset('vendor/php-email-form/validate.js') }}"></script>
 
   <!-- Template Main JS File -->
-  <script src="{{ asset('js/maindb.js') }}"></script>
+  <script src="{{ asset('js/main.js') }}"></script>
 
 </body>
 
